@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>công tắc và bóng đèn</title>
+</head>
+<body>
+<script>
+    let electricLamp = function () {
+        this.status = false;
+        this.check =function () {
+          if(this.status){
+              console.log("Lamp On!");
+          } else {
+              console.log("Lamp Off");
+          }
+        };
+        this.turnOn = function () {
+            this.status = true;
+        };
+        this.turnOff = function () {
+            this.status = false;
+        }
+    };
+    let switchButton = function () {
+        this.connectToElectricLamp = function (electric) {
+            this.lamp = electric;
+            alert ("Connected to the light bulb!");
+        };
+        this.switchOn = function () {
+            this.lamp.turnOn();
+        };
+        this.switchOff = function () {
+            this.lamp.turnOff();
+        }
+    };
+
+    let lightBulb = new electricLamp();
+    let switchElectric = new switchButton();
+    switchElectric.connectToElectricLamp(lightBulb);
+    switchElectric.switchOff();
+    lightBulb.check();
+    switchElectric.switchOn();
+    lightBulb.check();
+    switchElectric.switchOff();
+    lightBulb.check();
+    switchElectric.switchOn();
+    lightBulb.check();
+    switchElectric.switchOff();
+    lightBulb.check();
+    switchElectric.switchOn();
+    lightBulb.check();
+    switchElectric.switchOff();
+    lightBulb.check();
+    switchElectric.switchOn();
+    lightBulb.check();
+    switchElectric.switchOff();
+    lightBulb.check();
+    switchElectric.switchOn();
+    lightBulb.check();
+
+
+
+</script>
+</body>
+</html>
